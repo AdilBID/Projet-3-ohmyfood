@@ -1,0 +1,12 @@
+.Header{
+    @include flex (row, center, center);
+    @include shadowed;
+    background-color: $white;
+    padding: $padding-normal;
+
+    a{
+        position: absolute;
+        left: $padding-normal;
+        color: black;
+    }
+}

@@ -1,0 +1,23 @@
+.Hearth{
+    // .emptyHeart{
+
+    // }
+    font-size: 24px;
+    .fullHeart{
+        display: none;
+        
+    }
+    .fullHeart, .emptyHeart{
+        transition: 0.3s;
+    }
+    &:hover{
+        .emptyHeart{
+            display: none;
+        }
+
+        .fullHeart{
+            display: block;
+            color: $medium-purple;
+        }
+    }
+}

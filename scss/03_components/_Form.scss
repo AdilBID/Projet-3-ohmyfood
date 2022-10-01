@@ -1,0 +1,10 @@
+.Form{
+    @include flex (row, center,center);
+    padding: $padding-normal;
+    background-color: $mercury;
+    font-weight: bold;
+    
+    .fa-solid{
+        margin-right: $margin-normal;
+    }
+}

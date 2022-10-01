@@ -1,0 +1,88 @@
+.Menu{
+    height: 400px;
+
+    &-palette{
+        background: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+        background-size: cover;
+    }
+
+    &-enchantee{
+        background: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+        background-size: cover;
+    }
+    
+    &-francaise{
+        background: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+        background-size: cover;
+    }
+
+    &-delice{
+        background: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+        background-size: cover;
+    }
+
+    &Card{
+        @include  flex ( row, center, space-between);
+        animation: fadeIn 0.2s ease-in-out forwards;
+        opacity: 0;
+        overflow: hidden;
+        @for $i from 0 to 15 {
+            &:nth-child(#{$i}){
+                animation-delay: ($i *0.2s);
+            }
+        }
+
+        &Text{
+            @include transition( 0.3s);
+            @include  flex ( row, flex-end, space-between);
+            width: 100%;
+            padding: $padding-normal;
+
+            strong{
+                font-size: 18px;
+            }
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        &Icon{
+            @include  flex ( row, center, center);
+            @include transition( 0.3s);
+            background-color: $light-green;
+            height: 70px;
+            color: white;
+            margin-right: -200px;
+            width: 15%;
+
+        }
+
+        @include border-radius(10px);
+        @include shadowed;
+
+        margin-top: $margin-normal;
+        background-color: $white;
+
+        &:hover{
+            
+            .MenuCardIcon .fa-solid{
+                animation: rotate 0.5s ease-in-out;
+            }
+            .MenuCardIcon{
+                margin-right: 0;
+            }
+            .MenuCardText{
+                width: 85%;
+
+                p{
+                    width: 80%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                } 
+            }
+
+        }
+    }
+}

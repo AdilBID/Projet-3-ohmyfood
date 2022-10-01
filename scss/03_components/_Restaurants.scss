@@ -1,0 +1,71 @@
+.Restaurant{
+    padding: $padding-normal;
+    background-color: $mercury-light;
+
+    @media screen and (min-width:992px){
+        background-color: $white;
+        
+        &Tab{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+    
+        }
+    }
+
+    
+
+
+
+    h2{
+        padding: 20px;
+        padding-bottom: $padding-normal;
+    }
+   
+    .RestaurantCard{
+        @include shadowed;
+        @include border-radius(15px);
+        display: block;
+        margin-bottom: $margin-large;
+        overflow: hidden;
+        color: black;
+        text-decoration: none;
+        margin: 20px;
+
+
+        .RestaurantsImage{
+            height: 200px;
+            position: relative;
+
+            img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            }
+
+            span{
+                @include shadowed;
+                @include border-radius(3px);
+                position: absolute;
+                display: block;
+                right: 0;
+                padding: $padding-small $padding-normal;
+                background-color: $light-green;
+                color: $medium-green;
+                font-weight: bold;
+                margin: $margin-normal;
+            }
+
+        }
+        .RestaurantDescription{
+            @include flex( row, center, space-between);
+            padding: $padding-normal;
+
+            .RestaurantName{
+                font-weight: bold;
+            }
+
+        }
+
+    }
+
+}

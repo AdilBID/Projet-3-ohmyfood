@@ -1,0 +1,53 @@
+.Fonctionnement{
+
+    h2{
+        padding: 20px;
+        padding-bottom: $padding-normal;
+    }
+
+    &List{
+        @include resetlist;
+        padding: 0 20px;
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &Card{
+        @include shadowed;
+        @include resetlist;
+        @include border-radius(15px);
+        display: flex;
+        background-color: $mercury-light;
+        align-items: center;
+        padding: 20px;
+        margin: 10px  ; 
+        margin-bottom: 20px;
+        font-weight: bold;
+
+        &Active,&:hover{
+            background-color: $light-purple;
+            .fa-solid{
+                color: $medium-purple;
+            }
+        }
+    }       
+           
+    &Circle{
+        @include flex(row,center,center);
+        @include border-radius(50%);
+        background-color: $medium-purple;
+        color: $white;
+        height: 25px;
+        width: 25px;
+        margin-left: -30px;
+        margin-right: 10px;
+    }
+
+    &Title{ 
+        margin-left: 10px;
+    }
+}

@@ -1,0 +1,16 @@
+footer{
+    background-color: $gray-dark;
+    color: $white;
+    padding: $padding-large;
+
+    ul{
+        @include resetlist;
+
+        li{
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    
+}

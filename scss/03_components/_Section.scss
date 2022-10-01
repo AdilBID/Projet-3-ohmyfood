@@ -1,0 +1,17 @@
+.Section{
+    @include flex (column,center,center);
+    background-color: $mercury-light;
+    padding: $padding-large;
+
+    .SectionTitle{
+        text-align: center;
+        font-weight: bold;
+        font-size: $font-size-large;
+    }
+
+    p{
+        font-size: $font-size-normal;
+        text-align: center;
+        margin: $margin-normal 0;
+    }
+}

@@ -11,7 +11,12 @@ In the project root folder :
 Adil Bidelhadjela
 
 # Project URLs
-https://adilbid.github.io/Projet-3-ohmyfood/index.html
+Repo:
+- https://github.com/AdilBID/Projet-3-ohmyfood
+
+Site internet: 
+- https://adilbid.github.io/Projet-3-ohmyfood/index.html
+
 
 # Available commands
 - `npm install` : Install package and it's dependencies
